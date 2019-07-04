@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    background-color: #ddd;
+}
+
+img{
+    width: 50px;
+}
+
+header{
+    display: flex; /*alterar o padrão de display block para linha*/
+    align-items: center; /*alinhar no centro do cabeçalho*/
+    justify-content: space-between;
+    padding: 10px 20px; /*tem dois valores, pois o primeiro: cima e embaixo; o segundo: direita e esquerda*/
+    background-color: white;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 0 5px; /*empurra pra dentro*/
+}
+
+.menu-hamburguer{
+    display: none;
+    width: 30px;  
+}
+
+@media(max-width: 700px){
+    nav{
+        display: none;
+    }
+
+    .menu-hamburguer{
+        display: block;
+    }
+}
+
