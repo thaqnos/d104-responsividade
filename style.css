@@ -29,10 +29,26 @@ nav a{
 
 @media(max-width: 700px){
     nav{
-        display: none;
+        position: absolute; /*sobressai todos os outros elementos estáticos*/
+        right: 0;
+        top: 70px; /*para aparecer abaixo da navbar, ao invés de sobressair e perder o botão de menu*/
+        width: 100%;
+        background-color: white;
+        text-align: right;
+        transform: translateY(-200%);
+        transition: 0.2s;
     }
 
-    .menu-hamburguer{
+    nav.ativa{
+        transform: translateY(0);
+    }
+    
+    nav a{
+        display: block;
+        padding: 5px 20px;
+    }
+
+    .menu-hamburguer{ /*aparece o menu quando chega em 700px*/
         display: block;
     }
 }
